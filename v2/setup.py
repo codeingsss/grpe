@@ -31,7 +31,7 @@ def register_script_runner(target_path):
             subprocess.run(['setx', 'PATHEXT', new_pathext, '/M'], capture_output=True)
 
         try:
-            subprocess.run(['assoc', '.py=Python.File'], check=True, capture_output=True)
+            subprocess.run('assoc .py=Python.File', shell=True, check=True, capture_output=True)
             py_path = sys.executable
             ftype_cmd = f'ftype Python.File="{py_path}" "%1" %*'
             subprocess.run(ftype_cmd, shell=True, check=True, capture_output=True)
@@ -76,5 +76,3 @@ def register_script_runner(target_path):
                 os.remove(dst)
             os.symlink(target_path, dst)
             os.chmod(target_path, 0o755)
-
-    return True
