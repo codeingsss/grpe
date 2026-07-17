@@ -4,3 +4,5 @@
 3. finish setup
 4. then, execute on terminal ```source ~/.zshrc``` (mac)
 5. execute ```grpe``` on terminal
+
+If you want to have a conversation, add (talkmod) before your prompt.
