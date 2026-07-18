@@ -1,19 +1,41 @@
-# GRPE
-a AI CLI Program
-Developed using Python
+# GRPE v1 Shell
 
-# How To Use
-1. Download all files from v1.
-2. Run **main.py**.
-3. Add your API key.
-4. Start using the application.
+This folder contains the first version of the GRPE shell experience.
 
-install this modules
+## Features
+
+- Interactive prompt-based command execution
+- Gemini-powered command generation
+- Local API key storage in api.grpe
+
+## Requirements
+
+- Python 3.8 or newer
+- pyfiglet
+- google-genai
+
+Install the dependencies with:
+
 ```bash
 pip install pyfiglet google-genai
 ```
 
-# How To Use GRPE Your Project
-1. download v1/**grpe_cli.py**
-2. add **grpe_cli.py** to your project folder
-3. import **grpe_cli** and use ``cli`` funcion
+## How to Use
+
+1. Open this folder in a terminal.
+2. Run the main script:
+
+```bash
+python main.py
+```
+
+3. When prompted, enter your Gemini API key.
+4. Start typing natural language commands.
+
+## Using the SDK in Your Own Project
+
+You can also use the CLI helper module in your own project:
+
+1. Copy v1 shell/grpe_cli.py into your project folder.
+2. Import grpe_cli.
+3. Use the cli() function to generate and execute commands from text prompts.
