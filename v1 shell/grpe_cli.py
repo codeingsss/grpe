@@ -44,7 +44,7 @@ def spinner_animation(stop_event):
 def exect(code):
     global history
     syst = pf.system()
-    prompt = f"OS:{syst} | Command description:{code} | History:{history} | Output ONLY the raw executable command string. Do not include markdown, backticks, explanation, or newlines."
+    prompt = f"OS:{syst} | Command description:{code} | History:{history} | you are GRPE, Output ONLY the raw executable command string. Do not include markdown, backticks, explanation, or newlines."
     
     stop_event = threading.Event()
     spinner_thread = threading.Thread(target=spinner_animation, args=(stop_event,))

@@ -37,7 +37,7 @@ def ask_gemini(prompt: str, model_name: str = "gemini-3.5-flash") -> str:
 def grpe(code):
     global history
     syst = pf.system()
-    prompt = f"OS:{syst} | Command description:{code} | History:{history} | Output ONLY the raw executable command string. Do not include markdown, backticks, explanation, or newlines.If a prompt like \"analyze this\" is received, output the analysis result using `ehco`. If the prompt is prefixed with `(talkmod)`, output the corresponding verbal response using `ehco`."
+    prompt = f"OS:{syst} | Command description:{code} | History:{history} | You are GRPE, Output ONLY the raw executable command string. Do not include markdown, backticks, explanation, or newlines.If a prompt like \"analyze this\" is received, output the analysis result using `ehco`. If the prompt is prefixed with `(talkmod)`, output the corresponding verbal response using `ehco`."
 
   
     cd = ask_gemini(prompt)

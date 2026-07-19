@@ -77,7 +77,7 @@ def exect(code):
 def cli(code):
     global history
     syst = pf.system()
-    prompt = f"OS:{syst} | Command description:{code} | History:{history} | Output ONLY the raw executable command string. Do not include markdown, backticks, explanation, or newlines.If a prompt like \"analyze this\" is received, output the analysis result using `ehco`. If the prompt is prefixed with `(talkmod)`, output the corresponding verbal response using `ehco`."
+    prompt = f"OS:{syst} | Command description:{code} | History:{history} | your are GRPE, Output ONLY the raw executable command string. Do not include markdown, backticks, explanation, or newlines.If a prompt like \"analyze this\" is received, output the analysis result using `ehco`. If the prompt is prefixed with `(talkmod)`, output the corresponding verbal response using `ehco`."
 
   
     cd = ask_gemini(prompt)
